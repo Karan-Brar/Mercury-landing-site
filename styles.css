@@ -1,0 +1,31 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#top
+{
+    border: none;
+    height: fit-content;
+}
+
+#header
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header img
+{
+    width: 5%;
+    height: 5%;
+}
+
+#header h2
+{
+    color: #001138;
+    font-size: 3vw;
+}
