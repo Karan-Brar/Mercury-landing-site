@@ -1,3 +1,13 @@
+:root
+{
+    --blue: #2b6777;
+    --white: #ffffff;
+    --green: #52ab98;
+    --gray: #f2f2f2;
+    --lightBlue: #c8d8e4;
+}
+
+
 *
 {
     margin: 0;
@@ -18,7 +28,7 @@
 
 #header h2
 {
-    color: #52ab98;
+    color: var(--blue);
     font-size: 3em;
     display: inline-block;
     margin-left: 1em;
@@ -35,12 +45,12 @@
 #navbar a
 {
     text-decoration: none;
-    color: white;
+    color: var(--white);
     font-size: 1.2em;
     padding: 0.5em;
     margin-left:1em;
     font-weight: bold;
-    background-color: #52ab98;
+    background-color: var(--green);
     border-radius: 1em;
     width: 7em;
     text-align: center;
@@ -48,11 +58,174 @@
 
 #navbar a:hover
 {
-    color: #52ab98;
-    background-color: white;
+    color: var(--green);
+    background-color: var(--white);
 }
 
-@media (max-width: 800px)
+#main
+{
+    display: flex;
+}
+
+#text-area
+{
+    width: 50%;
+    background-color: var(--blue);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5em 0 3em;
+}
+
+#communication
+{
+    width: 50%;
+    background-color: var(--lightBlue);
+    height: 90vh;
+    overflow: hidden;
+}
+
+#text-area h4
+{
+    color: var(--white);
+    font-size: 3em;
+}
+
+#text-area p
+{
+    color: var(--white);
+    font-size: 1.5em;
+}
+
+#communication p
+{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    display: none;
+}
+
+
+#mobile-img
+{
+    display: none;
+}
+
+#footer
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--gray);
+    color: var(--blue);
+    height: 6em;
+}
+
+#footer a
+{
+    color: var(--blue);
+    text-decoration: none;
+    padding: 0.7em;
+}
+
+#footer a:hover
+{
+    text-decoration: underline;
+}
+
+#github a
+{
+    text-decoration: underline;
+}
+
+#form-area
+{
+    height: 90vh;
+    background-color: var(--lightBlue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#register-form
+{
+    width: 37%;
+}
+
+#register-form fieldset
+{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    height: 4em;
+}
+
+#register-form label
+{
+    color: var(--blue);
+    font-size: 1.2em;
+}
+
+#register-form input
+{
+    background-color: var(--lightBlue);
+    border: none;
+    border-bottom: 2px solid var(--blue);
+    outline: none;
+    color: var(--blue);
+    font-size: 1em;
+}
+
+#comments
+{
+    height: 13em !important;
+}
+
+#discover
+{
+    background-color: var(--lightBlue);
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    outline: none;
+    font-size: 1em;
+    padding: 0.5em;
+}
+
+#buttons
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#buttons button
+{
+    color: var(--white);
+    font-size: 1.2em;
+    padding: 0.5em;
+    font-weight: bold;
+    background-color: var(--green);
+    border-radius: 1em;
+    width: 7em;
+    text-align: center;
+    border: none;
+    margin-left: 1em;
+    cursor:pointer;
+}
+
+#buttons button:hover
+{
+    background-color: var(--white);
+    color: var(--green);
+}
+
+
+@media (max-width: 850px)
 {
     .pageTitle
     {
@@ -82,5 +255,62 @@
         border-radius: 0;
         width: 100%;
         text-align: center;
+    }
+
+    #main
+    {
+        flex-direction: column;
+    }
+
+    #text-area
+    {
+        width: 100%;
+        height: 60vh;
+    }
+
+    #text-area h4 {
+        font-size: 2em;
+    }
+    
+    #text-area p {
+        color: var(--white);
+        font-size: 1em;
+    }
+
+    #communication
+    {
+        width: 100%;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #desktop-img {
+        display: none;
+    }
+
+    #mobile-img
+    {
+        display: block;
+    }
+
+    #communication p 
+    {
+        display: block;
+    }
+
+    #register-form 
+    {
+        width: 87%;
+    }
+
+    #buttons button
+    {
+        font-size: 1.1em;
+        padding: 0.5em;
+        border-radius: 0.7em;
+        width: 7em;
     }
 }
