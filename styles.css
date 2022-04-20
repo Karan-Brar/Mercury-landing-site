@@ -71,7 +71,7 @@
 {
     width: 50%;
     background-color: var(--blue);
-    height: 90vh;
+    height: 90.5vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,7 +82,7 @@
 {
     width: 50%;
     background-color: var(--lightBlue);
-    height: 90vh;
+    height: 90.5vh;
     overflow: hidden;
 }
 
