@@ -142,12 +142,13 @@
 
 #form-area
 {
-    height: 90vh;
+    height: fit-content;
     background-color: var(--lightBlue);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 4em 0 3em 0;
 }
 
 #register-form
@@ -222,6 +223,54 @@
 {
     background-color: var(--white);
     color: var(--green);
+}
+
+#tier-area
+{
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    background-color: var(--blue);
+    justify-content: center;
+    align-items: center;
+    padding: 4.25em 0;
+}
+
+#cards
+{
+    display: flex;
+}
+
+.tier-card
+{
+    width: 22vw;
+    height: 60vh;
+    background-color: var(--white);
+    margin-right: 4em;
+    border-radius: 2em;
+    color:var(--blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition-property: height;
+}
+
+.tier-card h2
+{
+    margin-top: 1em;
+}
+
+.feature-list
+{
+    margin-bottom: 9em;
+}
+
+.feature-list li
+{
+    list-style: none;
+    margin-bottom: 1em;
+    font-size: 1.5em;
 }
 
 
@@ -312,5 +361,21 @@
         padding: 0.5em;
         border-radius: 0.7em;
         width: 7em;
+    }
+}
+
+@media (max-width: 1300px) 
+{
+    #cards
+    {
+        flex-direction: column;
+    }
+
+    .tier-card 
+    {
+        width: 22em;
+        height: 30em;
+        margin-bottom: 4em;
+        margin-right: 0em;
     }
 }
