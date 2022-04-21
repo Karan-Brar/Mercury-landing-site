@@ -44,6 +44,32 @@ function formHasErrors()
         }
     }
 
+    let regexFields = ["cell", "mail"];
+
+    let cellRegex = new RegExp(/^\d{10}$/);
+    let mailRegex = new RegExp(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/);
+
+    let regExpArr = [cellRegex, mailRegex]
+
+    for(let i = 0; i < regexFields.length; i++)
+    {
+        let textField = document.getElementById(regexFields[i]);
+
+        if(!regExpArr[i].test(textField.value))
+        {
+            document.getElementById(regexFields[i] + "_error").style.display = "block";  
+            textField.style.borderBottom = "2px solid red";
+            
+            if(!errorFlag)
+            {
+                textField.focus();
+                textField.select();
+            }
+
+            errorFlag = true;
+        }
+    }
+
     return errorFlag;
 }
 
