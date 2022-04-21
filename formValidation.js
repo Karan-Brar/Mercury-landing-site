@@ -47,7 +47,7 @@ function formHasErrors()
     let regexFields = ["cell", "mail"];
 
     let cellRegex = new RegExp(/^\d{10}$/);
-    let mailRegex = new RegExp(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/);
+    let mailRegex = new RegExp(/.+\@.+\..+/);
 
     let regExpArr = [cellRegex, mailRegex]
 
@@ -59,6 +59,8 @@ function formHasErrors()
         {
             document.getElementById(regexFields[i] + "_error").style.display = "block";  
             textField.style.borderBottom = "2px solid red";
+
+            console.log(regexFields[i] + " test failed");
             
             if(!errorFlag)
             {

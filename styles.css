@@ -1,3 +1,6 @@
+
+
+
 :root
 {
     --blue: #2b6777;
@@ -229,6 +232,22 @@
     color: var(--green);
 }
 
+#title
+{
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title h2
+{
+    color: var(--white);
+    margin-top: 0.4em;
+    margin-right: 1.7em;
+    font-size: 2.5em;
+}
+
 #tier-area
 {
     display: flex;
@@ -237,7 +256,7 @@
     background-color: var(--blue);
     justify-content: center;
     align-items: center;
-    padding: 4.25em 0;
+    padding: 2.4em 0;
 }
 
 #cards
@@ -256,18 +275,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     transition-property: height;
 }
 
 .tier-card h2
 {
-    margin-top: 1em;
+    margin-bottom: 2em;
 }
+
+.tier-card img
+{
+    max-width: 8em;
+    max-height: 5em;
+    opacity: 0.9;
+}
+
+#regular
+{
+    margin-bottom: 2em;
+}
+
+#regular-img
+{
+    margin-bottom: 0.5em;
+    height: 4em;
+    max-width: 10em;
+}
+
 
 .feature-list
 {
-    margin-bottom: 9em;
+    margin-bottom: 2em;
 }
 
 .feature-list li
@@ -389,5 +428,10 @@
         height: 30em;
         margin-bottom: 4em;
         margin-right: 0em;
+    }
+
+    #title h2 
+    {
+        margin-right: 0;
     }
 }
