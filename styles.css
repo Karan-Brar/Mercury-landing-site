@@ -1,5 +1,11 @@
+/******w*************
+    
+    Project 2 Stylesheet
+    Name: Karanvir Singh Brar
+    Date: 2022-04-21
+    Description: CSS file for project 3
 
-
+********************/
 
 :root
 {
@@ -301,6 +307,7 @@
     margin-bottom: 0.5em;
     height: 4em;
     max-width: 10em;
+    margin-right: 1em;
 }
 
 
