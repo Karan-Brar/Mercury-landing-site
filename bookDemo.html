@@ -24,19 +24,22 @@
             <fieldset>
                 <label for="name">Full Name</label>
                 <input type="text" name="name" id="name">
-                <div class="form_error" id="name_error"></div>
+                <div class="form_error" id="name_error">Enter your name</div>
             </fieldset>
             <fieldset>
                 <label for="cell">Phone number</label>
                 <input type="tel" name="cell" id="cell">
+                <div class="form_error" id="cell_error">Enter a valid phone number</div>
             </fieldset>
             <fieldset>
                 <label for="mail">E-mail ID</label>
                 <input type="email" name="mail" id="mail">
+                <div class="form_error" id="mail_error">Enter a valid E-mail address</div>
             </fieldset>
             <fieldset id="comments">
                 <label for="discover">How did you discover Mercury?</label>
                 <textarea name="discover" id="discover" cols="30" rows="7"></textarea>
+                <div class="form_error" id="discover_error">Comments field is required</div>
             </fieldset>
             <div id="buttons">
                 <button type="submit">Submit</button>
@@ -53,5 +56,7 @@
         <div id="github">
             <p>Made by - <a href="https://github.com/Karan-Brar">Karan Brar</a></p>
         </div>
+        </footer>
+        <script src="formValidation.js"></script>
 </body>
 </html>
